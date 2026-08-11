@@ -10,6 +10,9 @@ read -s MOBILE_NUMBER
 echo "Mobile number is $MOBILE_NUMBER"
 echo "please enter pincode:$3"
 echo "enter pin code:$3"
+Leaders=("Dilma" "Haneef")
+echo "Leaders:${Leaders[@]}"
+echo "Leaders:${Leaders[0]}"
 echo "all variables:$@"
 echo "who is running:$USER"
 echo "present working directory:$PWD"
