@@ -13,10 +13,10 @@ read pin_number
 echo "enter pin code:$pin_number"
 echo "all variables:$@"
 echo "who is running:$USER"
-echo "present working directory"$PWD"
+echo "present working directory:$PWD"
 echo "home directory:$HOME"
 echo "PID of this script:$$"
-echo "current script name:$?"
+echo "previous script output:$?"
 echo "current running script:$0"
 END_TIME=$(date +%s)
 
