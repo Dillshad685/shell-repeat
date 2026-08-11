@@ -4,7 +4,7 @@
 
 echo "entered number:$1"
 
-if [ $(($1 %2)) -eq 0]; then
+if [ $(($1 %2)) -eq 0 ]; then
     echo "given number $1 is even"
 else
     echo "given number $1 is odd"
