@@ -11,5 +11,5 @@ echo "Mobile number is $MOBILE_NUMBER"
 
 END_TIME=$(date +%s)
 
-echo "Script execution time: $((END_TIME - START_TIME))"
+echo "Script execution time: $((END_TIME - START_TIME))seconds"
 
