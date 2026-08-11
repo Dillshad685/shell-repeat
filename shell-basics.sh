@@ -8,7 +8,7 @@ echo "Hi $name1 I am fine what about you  $name2"
 echo "Please enter mobile number"
 read -s MOBILE_NUMBER
 echo "Mobile number is $MOBILE_NUMBER"
-
+echo "$@"
 END_TIME=$(date +%s)
 
 echo "Script execution time: $((END_TIME - START_TIME))seconds"
