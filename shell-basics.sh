@@ -11,7 +11,7 @@ echo "Mobile number is $MOBILE_NUMBER"
 echo "please enter pincode"
 read pin_number
 echo "enter pin code:$pin_number"
-echo "$@"
+echo "all variables:$@"
 echo "who is running:$USER"
 echo "present working directory"$PWD"
 echo "home directory:$HOME"
