@@ -33,7 +33,7 @@ if [ $? -ne 0 ]; then
     dnf install mysql -y  &>> $SCRIPT_NAME  &
     VALIDATE $? "mysql"
 else
-    echo -e "$Y nginx $N installed $G successfully $N"
+    echo -e "$Y mysql $N already installed $G successfully $N"
 fi
 
 dnf list installed nginx 
@@ -42,7 +42,7 @@ if [ $? -ne 0 ]; then
     dnf install nginx -y &>> $SCRIPT_NAME  &
     VALIDATE $? "nginx"
 else
-    echo -e "$Y nginx $N installed $G successfully $N"
+    echo -e "$Y nginx $N already installed $G successfully $N"
 fi
 
 END_TIME=$(date +%s)
