@@ -9,7 +9,7 @@ SCRIPT_NAME="$LOG_FOLDER/$SCRIPT_PATH.log"
 mkdir -p $LOG_FOLDER
 
 START_TIME=$(date +%s)
-if [ $(id -u) -eq 0 ]; then
+if [ $(id -u) -ne 0 ]; then
     echo "login with sudo users"
     exit 1
 fi
