@@ -27,13 +27,13 @@ VALIDATE(){
     fi
 }
 
-dnf list installed mysql
+dnf list installed redis
 
 if [ $? -ne 0 ]; then
-    dnf install mysql -y  &>> $SCRIPT_NAME  &
+    dnf install redis -y  &>> $SCRIPT_NAME  &
     VALIDATE $? "mysql"
 else
-    echo -e "$Y mysql $N already installed $G successfully $N"
+    echo -e "$Y redis $N already installed $G successfully $N"
 fi
 
 dnf list installed nginx 
