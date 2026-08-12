@@ -1,3 +1,5 @@
+#!/bin/bash
+
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -9,6 +11,8 @@ SCRIPT_NAME="$LOG_FOLDER/$SCRIPT_PATH.log"
 mkdir -p $LOG_FOLDER
 
 START_TIME=$(date +%s)
+echo "script execution start time: $START_TIME"
+
 if [ $(id -u) -ne 0 ]; then
     echo "login with sudo users"
     exit 1
@@ -25,7 +29,7 @@ VALIDATE(){
 
 dnf list installed mysql
 
-if [ $? -eq 0 ]; then
+if [ $? -ne 0 ]; then
     dnf install mysql -y  &>> $SCRIPT_NAME  &
     VALIDATE $? "mysql"
 else
@@ -42,6 +46,8 @@ else
 fi
 
 END_TIME =$(date +%s)
+echo "script executed in $END_TIME seconds"
+
 TOTAL_TIME=$(($END_TIME - $START_TIME))
 echo "SCRIPT_EXECUTION time is $Y $TOTAL_TIME SEC $N"
 
