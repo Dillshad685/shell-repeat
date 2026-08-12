@@ -27,7 +27,7 @@ VALIDATE(){
     fi
 }
 
-dnf list installed mysqld
+dnf list installed mysql-server
 
 if [ $? -ne 0 ]; then
     dnf install mysql-server -y  &>> $SCRIPT_NAME  
