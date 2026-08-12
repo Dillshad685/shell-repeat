@@ -26,7 +26,7 @@ VALIDATE(){
 dnf list installed mysql
 
 if [ $? -eq 0 ]; then
-    dnf install mysql -y &
+    dnf install mysql -y  &>> $SCRIPT_NAME  &
     VALIDATE $? "mysql"
 else
     echo -e "$Y nginx $N installed $G successfully $N"
@@ -35,7 +35,7 @@ fi
 dnf list installed nginx 
 
 if [ $? -ne 0 ]; then
-    dnf install nginx -y
+    dnf install nginx -y &>> $SCRIPT_NAME  &
     VALIDATE $? "nginx"
 else
     echo -e "$Y nginx $N installed $G successfully $N"
