@@ -45,7 +45,7 @@ else
     echo -e "$Y nginx $N installed $G successfully $N"
 fi
 
-END_TIME =$(date +%s)
+END_TIME=$(date +%s)
 echo "script executed in $END_TIME seconds"
 
 TOTAL_TIME=$(($END_TIME - $START_TIME))
