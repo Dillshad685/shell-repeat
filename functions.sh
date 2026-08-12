@@ -49,5 +49,5 @@ END_TIME =$(date +%s)
 echo "script executed in $END_TIME seconds"
 
 TOTAL_TIME=$(($END_TIME - $START_TIME))
-echo "SCRIPT_EXECUTION time is $Y $TOTAL_TIME SEC $N"
+echo -e "SCRIPT_EXECUTION time is $Y $TOTAL_TIME SEC $N"
 
